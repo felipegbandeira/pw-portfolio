@@ -1,0 +1,68 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<h3 class="titulos">Quiz - Programação Web</h3>
+
+    <div class="container-quiz">
+        <form  method="POST" action="" enctype="multipart/form-data" autocomplete="on">
+            {% csrf_token %}
+            <fieldset>
+                    <p>1 - Qual é o valor do atributo target que abre o documento linkado em uma nova janela?</p>
+                    <input type="radio" id="self" name="Q1" value="self">
+                    <label for="self">_self</label><br>
+                    <input type="radio" id="top" name="Q1" value="top">
+                    <label for="top">_top</label><br>
+                    <input type="radio" id="blank" name="Q1" value="blank">
+                    <label for="blank">_blank</label><br>
+                    <input type="radio" id="parent" name="Q1" value="parent">
+                    <label for="parent">_parent</label><br><br>
+            </fieldset>
+
+            <fieldset>
+                    <p>2 - O atributo display: none faz o elemento desaparecer por completo, enquanto
+                        visibility: hidden esconde o elemento, mas este continua a ocupar espaço na página</p>
+                    <input type="radio" id="true" name="Q2" value="1">
+                    <label for="true">Verdadeiro</label><br>
+                    <input type="radio" id="false" name="Q2" value="0">
+                    <label for="false">Falso</label><br>
+            </fieldset>
+
+                <fieldset>
+                    <br><label for="Q3">3 - Escreva o media query para aplicar estilos a um browser com <600px de largura: </label><br><br>
+                    <input style="width: 250px" type="text" id = "Q3" name="Q3" placeholder="@media()" maxlength = "24">
+                </fieldset>
+
+                <fieldset>
+                    <br><p>4 - Em Django, quais ficheiros fazem parte do Fluxo do MTV?</p>
+                    <input type="checkbox" id="urls" name="Q4.1" value="urls">
+                    <label for="urls"> urls.py</label><br>
+                    <input type="checkbox" id="views" name="Q4.2" value="views">
+                    <label for="views"> views.py</label><br>
+                    <input type="checkbox" id="forms" name="Q4.3" value="forms">
+                    <label for="forms"> forms.py</label><br>
+                    <input type="checkbox" id="models" name="Q4.4" value="models">
+                    <label for="models"> models.py</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <br><label for = "Q5"> 5 - Qual destes é um elemento possível no head?</label><br><br>
+                    <input list="Q5" name="Q5" id="question5">
+                    <datalist id="Q5">
+                        <option value="<html>">
+                        <option value="<title>">
+                        <option value="<body>">
+                        <option value="<p>">
+                    </datalist>
+                </fieldset>
+                <br><br>
+                <fieldset class="submitQuiz">
+                    <input style="width: 250px" type="text" name="nome" id="nome" placeholder="Insira seu nome" required><br><br>
+                    <input type="submit" value="Terminar quiz">
+                </fieldset>
+        </form>
+    </div>
+    <h3 class="titulos">Pontuações</h3>
+    {% load static %}
+    <img id="grafico" src="{% static 'portfolio/images/grafico.png' %}">
+    <br><br>
+{% endblock %}

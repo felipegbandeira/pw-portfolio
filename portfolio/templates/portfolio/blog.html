@@ -1,0 +1,29 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<h3 class="titulos">Blog</h3>
+
+
+    <div class = "container-blog">
+
+        <div class="blog-posts">
+            {% for post in Posts %}
+                <div>
+                    <p>Autor: {{ post.nome }}</p>
+                    <p>Título: {{ post.titulo }}</p>
+                    <p>{{ post.comentario }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="blogform">
+            <form method="post" action="">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+{% endblock %}

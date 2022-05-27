@@ -1,0 +1,158 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 34px 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn{
+  display: inline-block;
+  text-align: center;
+    color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdownSobre, li.dropdownWeb {
+  display: inline-block;
+}
+
+.dropdown-contentSobre, .dropdown-contentWeb {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 130px;
+  z-index: 1;
+}
+
+.dropdown-contentSobre a, .dropdown-contentWeb a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contentSobre a:hover, .dropdown-contentWeb a:hover {background-color: black;}
+
+.dropdownSobre:hover .dropdown-contentSobre, .dropdownWeb:hover .dropdown-contentWeb{
+  display: block;
+}
+
+.titulos{
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+main{
+    background-color: goldenrod;
+}
+
+.container-licenciatura,.container-projetos  {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 100px;
+}
+
+.cadeira {
+    float: left;
+    width: 250px;   height: 150px;
+    padding: 25px;  margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.semestre{
+    width: 100%;
+    text-align: center;
+}
+
+.container-blog, .container-quiz{
+    display: block;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-quiz{
+    background-color: white;
+    border: black solid 2px;
+    margin: auto;
+    width: 50%; height: 50%;
+}
+
+.submitQuiz{
+    text-align: center;
+}
+
+.blogform{
+    margin: auto;
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    width: 50%;   height: 50%;
+}
+
+textarea{
+    height: 100px;
+}
+
+.blog-posts{
+    margin: auto;
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    width: 50%;   height: 50%;
+}
+
+.blog-posts div{
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: black solid 2px;
+}
+
+.blog-posts div p{
+    display: block;
+    word-break: break-all;
+    text-align: center;
+}
+
+#grafico{
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
