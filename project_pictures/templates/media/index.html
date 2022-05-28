@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pictures</title>
+</head>
+<body>
+    <h1>Pictures</h1>
+    {% for picture in pictures %}
+        <img src="{{ picture.image.url }}">
+        <h4>{{ picture.name }}</h4>
+        <a href="{% url 'media:upload' %}">Carregar imagem</a>
+        (<a href="{% url 'media:delete' picture.pk %}">apagar</a>)
+    {% endfor %}
+</body>
+</html>

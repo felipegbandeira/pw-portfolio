@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object model="portfolio.postblog" pk="3">
+    <field name="nome" type="CharField">Felipe</field>
+    <field name="titulo" type="CharField">titulo</field>
+    <field name="comentario" type="CharField">TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</field>
+    <field name="data" type="DateTimeField">2022-05-22T18:24:06.034906+00:00</field>
+  </object>
+  <object model="portfolio.postblog" pk="4">
+    <field name="nome" type="CharField">Not Felipe</field>
+    <field name="titulo" type="CharField">titulo</field>
+    <field name="comentario" type="CharField">AnotherTest AnotherTest AnotherTest.</field>
+    <field name="data" type="DateTimeField">2022-05-22T18:24:06.034906+00:00</field>
+  </object>
+  <object model="portfolio.postblog" pk="5">
+    <field name="nome" type="CharField">Tester</field>
+    <field name="titulo" type="CharField">titulo</field>
+    <field name="comentario" type="CharField">onsaougbroglwkfmqpirgirnpqmpg</field>
+    <field name="data" type="DateTimeField">2022-05-22T18:24:06.034906+00:00</field>
+  </object>
+  <object model="portfolio.postblog" pk="6">
+    <field name="nome" type="CharField">Felipe</field>
+    <field name="titulo" type="CharField">Novo post</field>
+    <field name="comentario" type="CharField">PostPostPostPostPostPostPostPostPostPost</field>
+    <field name="data" type="DateTimeField">2022-05-22T18:24:28.933629+00:00</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="18">
+    <field name="nome" type="CharField">Felipe</field>
+    <field name="pontuacao" type="IntegerField">7</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="19">
+    <field name="nome" type="CharField">Teste1</field>
+    <field name="pontuacao" type="IntegerField">4</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="20">
+    <field name="nome" type="CharField">Tester</field>
+    <field name="pontuacao" type="IntegerField">1</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="21">
+    <field name="nome" type="CharField">Tester</field>
+    <field name="pontuacao" type="IntegerField">1</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="22">
+    <field name="nome" type="CharField">Prof</field>
+    <field name="pontuacao" type="IntegerField">2</field>
+  </object>
+</django-objects>
