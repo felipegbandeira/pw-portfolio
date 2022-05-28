@@ -36,10 +36,10 @@ class Cadeira(models.Model):
    nome = models.CharField(max_length=20)
    ano = models.IntegerField()
    descricao = models.TextField()
-   linguagens = models.ManyToMany(Linguagem)
+   linguagens = models.ManyToManyField(Linguagem)
    docente_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)
-   docentes_praticas = models.ManyToMany(Professor, related_name='caderias')
-   projetos = models.ManyToMany(Projeto)
+   docentes_praticas = models.ManyToManyField(Professor, related_name='caderias')
+   projetos = models.ManyToManyField(Projeto)
 
 class Tfc(models.Model):
     titulo = models.CharField(max_length=50)
