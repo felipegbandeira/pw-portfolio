@@ -57,4 +57,4 @@ class Tecnologia(models.Model):
     acronimo = models.CharField(max_length=6)
     ano = models.IntegerField()
     criador = models.CharField(max_length=50)
-    logo = models.ImageField()
+    
