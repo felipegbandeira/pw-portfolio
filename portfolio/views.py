@@ -30,6 +30,9 @@ def competencias_page_view(request):
 def licenciatura_page_view(request):
     return render(request, 'portfolio/licenciatura.html')
 
+def sobre_page_view(request):
+    return render(request, 'portfolio/sobre.html')
+
 
 def blog_page_view(request):
     form = PostForm(request.POST or None)

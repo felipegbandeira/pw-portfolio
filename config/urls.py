@@ -28,4 +28,5 @@ urlpatterns = [
     path('licenciatura', admin.site.urls, name='licenciatura'),
     path('blog', admin.site.urls, name='blog'),
     path('quiz', admin.site.urls, name='quiz'),
+    path('sobre', admin.site.urls, name='sobre'),
 ]

@@ -15,4 +15,5 @@ urlpatterns = [
     path('licenciatura', views.licenciatura_page_view, name='licenciatura'),
     path('blog', views.blog_page_view, name='blog'),
     path('quiz', views.quiz_page_view, name='quiz'),
+    path('sobre', views.sobre_page_view, name='sobre'),
 ]
