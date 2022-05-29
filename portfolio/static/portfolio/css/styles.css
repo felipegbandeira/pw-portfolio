@@ -4,6 +4,8 @@ header {
     align-items: center;
     background-color: black;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 ul {
@@ -164,11 +166,29 @@ main{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container-home .titulos{
+    width: 100%;
 }
 
 .frase{
     margin: 50px;
     text-align: center;
+}
+
+.container-home .titulos{
+    text-align: center;
+}
+
+article{
+    width: 50%;
+    text-align: justify;
+    font-weight: bold;
+    text-shadow: white 1px 1px;
+    font-size: large;
 }
 
 .container-quiz{
@@ -227,3 +247,4 @@ textarea{
 footer{
     height: 60px;
 }
+
