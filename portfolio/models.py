@@ -37,8 +37,9 @@ class Projeto(models.Model):
 
 
 class Cadeira(models.Model):
-    nome = models.CharField(max_length=20)
+    nome = models.CharField(max_length=50)
     ano = models.IntegerField()
+    semestre = models.IntegerField()
     descricao = models.TextField()
     docente_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)
     docentes_praticas = models.ManyToManyField(Professor, related_name='caderias')
@@ -57,4 +58,4 @@ class Tecnologia(models.Model):
     acronimo = models.CharField(max_length=6)
     ano = models.IntegerField()
     criador = models.CharField(max_length=50)
-    
+

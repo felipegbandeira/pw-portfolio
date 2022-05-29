@@ -1,82 +1,47 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h2 class="titulos">Licenciatura</h2>
+	<h3 class="titulos">Licenciatura</h3>
+
     <div class = "container-licenciatura">
         <div class="semestre">
             <h2>Licenciatura de Informática de Gestão</h2>
             <h3>Ano 1 - Semestre 1</h3>
         </div>
-        <div class = "cadeira">
-            <h3>Fundamentos de programação</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Contabilidade</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Fundamentos de Sistemas de Informação</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Matemática 1</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Teoria e Prática de Marketing</h3>
-        </div>
+        {% for cadeira in a1s1 %}
+                <div class="cadeira">
+                <h3>{{ cadeira.nome }}</h3>
+                    <p>{{ cadeira.descricao }}</p>
+                <p>Docente: {{ cadeira.docente_teorica.nome }}</p>
+                </div>
+        {% endfor %}
 
 
         <div class="semestre"><h3>Ano 1 - Semestre 2</h3></div>
-        <div class = "cadeira">
-            <h3>Cálculo Financeiro</h3>
-        </div>
-
-        <div class = "cadeira">
-            <h3>Métricas Empresariais</h3>
-        </div>
-
-        <div class = "cadeira">
-            <h3>Competências Comportamentais</h3>
-        </div>
-
-        <div class = "cadeira">
-            <h3>Algoritmia e Estrutura de Dados</h3>
-        </div>
-
-        <div class = "cadeira">
-            <h3>Linguagens de Programação I</h3>
-        </div>
+        {% for cadeira in a1s2 %}
+                <div class="cadeira">
+                <h3>{{ cadeira.nome }}</h3>
+                    <p>{{ cadeira.descricao }}</p>
+                <p>Docente: {{ cadeira.docente_teorica.nome }}</p>
+                </div>
+        {% endfor %}
 
         <div class="semestre"><h3>Ano 2 - Semestre 1</h3></div>
-        <div class = "cadeira">
-            <h3>Bases de Dados</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Instrumentos de Gestão</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Investigação Operacional</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Linguagens de Programação II</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Sistemas Operativos</h3>
-        </div>
+        {% for cadeira in a2s1 %}
+                <div class="cadeira">
+                <h3>{{ cadeira.nome }}</h3>
+                    <p>{{ cadeira.descricao }}</p>
+                <p>Docente: {{ cadeira.docente_teorica.nome }}</p>
+                </div>
+        {% endfor %}
 
         <div class="semestre"><h3>Ano 2 - Semestre 2</h3></div>
-        <div class = "cadeira">
-            <h3>Engenharia de Requisitos e Testes</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Sistemas de Suporte à Decisão</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Gestão Financeira</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Programação Web</h3>
-        </div>
-        <div class = "cadeira">
-            <h3>Redes de Computadores</h3>
-        </div>
+        {% for cadeira in a2s2 %}
+                <div class="cadeira">
+                <h3>{{ cadeira.nome }}</h3>
+                    <p>{{ cadeira.descricao }}</p>
+                <p>Docente: {{ cadeira.docente_teorica.nome }}</p>
+                </div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .forms import PostForm
-from .models import PostBlog
-from .models import PontuacaoQuizz
+from .models import *
 from matplotlib import pyplot as plt
 
 
@@ -28,10 +27,18 @@ def competencias_page_view(request):
 
 
 def licenciatura_page_view(request):
-    return render(request, 'portfolio/licenciatura.html')
+    ano1sem1 = Cadeira.objects.filter(ano=1).filter(semestre=1).values()
+    ano1sem2 = Cadeira.objects.filter(ano=1).filter(semestre=2).values()
+    ano2sem1 = Cadeira.objects.filter(ano=2).filter(semestre=1).values()
+    ano2sem2 = Cadeira.objects.filter(ano=2).filter(semestre=2).values()
+
+    ctx = {'a1s1': ano1sem1, 'a1s2': ano1sem2, 'a2s1': ano2sem1, 'a2s2': ano2sem2}
+
+    return render(request, 'portfolio/licenciatura.html',ctx)
 
 def sobre_page_view(request):
-    return render(request, 'portfolio/sobre.html')
+    ctx = {'Tecs': Tecnologia.objects.all()}
+    return render(request, 'portfolio/sobre.html', ctx)
 
 
 def blog_page_view(request):

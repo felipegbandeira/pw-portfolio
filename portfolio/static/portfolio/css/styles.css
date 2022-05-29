@@ -29,11 +29,18 @@ li.dropdownSobre, li.dropdownWeb {
   display: inline-block;
 }
 
-.dropdown-contentSobre, .dropdown-contentWeb {
+.dropdown-contentSobre {
   display: none;
   position: absolute;
   background-color: black;
   width: 130px;
+  z-index: 1;
+}
+.dropdown-contentWeb{
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 175px;
   z-index: 1;
 }
 
@@ -76,21 +83,63 @@ main{
     background-color: goldenrod;
 }
 
-.container-licenciatura,.container-projetos  {
-
+.container-projetos  {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     padding: 25px 100px;
 }
 
-.cadeira {
+.container-sobre{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 180px;
+}
+
+.tech{
     float: left;
-    width: 250px;   height: 150px;
+    width: 250px;   height: 170px;
+    background-color: white;
+    border-radius: 10px; border: solid black 2px;
+    margin: 10px 10px 10px 60px;
+    text-align: center;
+}
+
+.tech p:first-child {
+    font-weight: bold;
+}
+
+.mapa img{
+    width: 900px; height: 500px;
+     border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.container-licenciatura{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 180px;
+}
+
+
+.cadeira{
+    float: left;
+    width: 400px;   height: 320px;
     padding: 25px;  margin: 10px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 15px grey;
+    text-align: center;
+}
+
+.cadeira p{
+    text-align: justify;
 }
 
 .semestre{

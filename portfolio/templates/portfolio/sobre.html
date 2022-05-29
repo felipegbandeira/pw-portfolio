@@ -2,7 +2,29 @@
 
 {% block main %}
 	<h3 class="titulos">Sobre o site</h3>
-    <p>texto texto texto texto texto texto texto </p>
+
+    <div class="container-sobre">
+
+        <div class="mapa">
+            <h3 class="titulos">Mapa do Site</h3>
+            {% load static %}
+            <img src="{% static 'portfolio/images/mapa.png' %}">
+        </div>
+
+
+        <div class="tecnologias">
+            <h3 class="titulos">Tecnologias utilizadas no site</h3>
+             {% for tecnologia in Tecs %}
+                <div class="tech">
+                    <p class="lead">{{ tecnologia.nome }} ({{ tecnologia.acronimo }})</p>
+                    <p>Autor: {{ tecnologia.criador }}</p>
+                    <p>Ano: {{ tecnologia.ano }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
 
 
 {% endblock main %}
