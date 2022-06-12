@@ -15,7 +15,8 @@ def apresntacao_page_view(request):
 
 
 def projetos_page_view(request):
-    return render(request, 'portfolio/projetos.html')
+    ctx = {"Tfc": Tfc.objects.all()}
+    return render(request, 'portfolio/projetos.html',ctx)
 
 
 def formacao_page_view(request):

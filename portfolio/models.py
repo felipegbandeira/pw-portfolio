@@ -48,14 +48,19 @@ class Cadeira(models.Model):
 
 class Tfc(models.Model):
     titulo = models.CharField(max_length=50)
-    autor = models.CharField(max_length=50)
+    autores = models.CharField(max_length=50)
+    orientadores = models.CharField(max_length=50)
     ano = models.IntegerField()
-    sumario = models.CharField(max_length=500)
-
+    resumo = models.CharField(max_length=500)
+    relatorio = models.CharField(max_length=500)
+    link = models.CharField(max_length=500)
+    imagem = models.CharField(max_length=500)
+    video = models.CharField(max_length=500)
 
 class Tecnologia(models.Model):
     nome = models.CharField(max_length=50)
     acronimo = models.CharField(max_length=6)
     ano = models.IntegerField()
     criador = models.CharField(max_length=50)
+
 
