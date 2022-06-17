@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://api.ipma.pt/open-data/forecast/warnings/warnings_www.json')
+    .then(response => response.json())
+    .then(data => {
+            const text = data[0].text;
+            const awarenessTypeName = data[0].awarenessTypeName;
+            const awarenessLevelID = data[0].awarenessLevelID;
+            const idAreaAviso = data[0].idAreaAviso;
+            document.querySelector('.meteorologia .awarness').innerHTML = `AVISO: ${awarenessTypeName} (Nível:
+            ${awarenessLevelID})`;
+            document.querySelector('.meteorologia .area').innerHTML = `ÁREA: ${idAreaAviso}`;
+            document.querySelector('.meteorologia p').innerHTML = `${text}`;
+        });
+    });
 
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '028ea5dc69mshf0d0385f1166ec8p1ca499jsn43ae8f223e6b',
+		'X-RapidAPI-Host': 'covid-19-statistics.p.rapidapi.com'
+	}
+};
+
+fetch('https://covid-19-statistics.p.rapidapi.com/regions', options)
+	.then(response => response.json())
+	.then(response => console.log(response.data[69]))
+	.catch(err => console.error(err));
+    </script>
 </head>
 <body>
   <header>
@@ -31,9 +60,8 @@
             <li class="dropdownSobre">
                 <a href="#" class="dropbtn">Sobre mim</a>
                 <div class="dropdown-contentSobre">
-                    <a href="{% url 'portfolio:competencias' %}">Competências</a>
                     <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
-                    <a href="{% url 'portfolio:licenciatura' %}">Contacto</a>
+                    <a href="{% url 'portfolio:contacto' %}">Contacto</a>
                 </div>
             </li>
             <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
@@ -43,6 +71,7 @@
                 <div class="dropdown-contentWeb">
                     <a href="{% url 'portfolio:quiz' %}">Quiz</a>
                     <a href="{% url 'portfolio:sobre' %}">Sobre o site</a>
+                    <a href="{% url 'portfolio:noticias' %}">Notícias</a>
                     <a href="https://labs-felipebandeira-a22102727.herokuapp.com/">Labs</a>
                 </div>
             </li>

@@ -29,4 +29,6 @@ urlpatterns = [
     path('blog', admin.site.urls, name='blog'),
     path('quiz', admin.site.urls, name='quiz'),
     path('sobre', admin.site.urls, name='sobre'),
+    path('noticias', admin.site.urls, name='noticias'),
+    path('contacto', admin.site.urls, name='contacto'),
 ]

@@ -69,6 +69,12 @@ a{
     color: white;
 }
 
+.tfcs a{
+    color: black;
+    text-align: center;
+
+}
+
 nav a {
     text-decoration: none;
     color: white;
@@ -149,6 +155,16 @@ main{
     text-align: justify;
 }
 
+.tfcs{
+    float: left;
+    width: 500px;   height: 400px;
+    padding: 20px;  margin: 10px 10px 5px 50px; /* top right bottom left */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+    text-align: center;
+}
+
 .semestre{
     width: 100%;
     text-align: center;
@@ -175,8 +191,11 @@ main{
 }
 
 .frase{
-    margin: 50px;
+    margin: 200px 50px 50px 50px; /* top right bottom left */
     text-align: center;
+    height: 500px;
+    color: black;
+    text-shadow: 1px 1px black ;
 }
 
 .container-home .titulos{
@@ -184,11 +203,15 @@ main{
 }
 
 article{
-    width: 50%;
+    width: 60%;
     text-align: justify;
     font-weight: bold;
-    text-shadow: white 1px 1px;
+    text-shadow: black 1px 1px;
     font-size: large;
+    margin-bottom: 150px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .container-quiz{
@@ -248,3 +271,25 @@ footer{
     height: 60px;
 }
 
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: red;
+  color: white;
+}

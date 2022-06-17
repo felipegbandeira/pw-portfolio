@@ -13,9 +13,14 @@ def home_page_view(request):
 def apresntacao_page_view(request):
     return render(request, 'portfolio/apresentacao.html')
 
+def noticias_page_view(request):
+    return render(request, 'portfolio/noticias.html')
+
+def contacto_page_view(request):
+    return render(request, 'portfolio/contacto.html')
 
 def projetos_page_view(request):
-    ctx = {"Tfc": Tfc.objects.all()}
+    ctx = {"Tfcs": Tfc.objects.all()}
     return render(request, 'portfolio/projetos.html',ctx)
 
 
