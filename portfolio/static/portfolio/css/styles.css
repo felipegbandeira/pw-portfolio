@@ -170,7 +170,7 @@ main{
     text-align: center;
 }
 
-.container-blog, .container-quiz, .container-home{
+.container-blog, .container-quiz, .container-home, .container-noticias{
     display: block;
     justify-content: center;
     padding: 20px;
@@ -268,7 +268,7 @@ textarea{
 }
 
 footer{
-    height: 60px;
+    height: 70px;
 }
 
 .fa {
@@ -292,4 +292,19 @@ footer{
 .fa-github {
   background: red;
   color: white;
+}
+
+.word h4{
+    color: red;
+    text-shadow: 1px 1px black;
+}
+
+.meteorologia{
+    padding: 20px;
+    margin: 10px 10px 10px 320px;
+    background-color: white;
+    border-radius: 10px;
+    border: black solid 2px;
+    text-align: center;
+    width: 50%;
 }

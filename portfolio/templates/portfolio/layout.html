@@ -28,20 +28,32 @@
     const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '028ea5dc69mshf0d0385f1166ec8p1ca499jsn43ae8f223e6b',
-		'X-RapidAPI-Host': 'covid-19-statistics.p.rapidapi.com'
+		'X-RapidAPI-Key': 'e7eefe8d14msh4c55ecf008e17afp14cb6djsnb08ba69a3439',
+		'X-RapidAPI-Host': 'word-of-the-day2.p.rapidapi.com'
 	}
 };
 
-fetch('https://covid-19-statistics.p.rapidapi.com/regions', options)
+fetch('https://word-of-the-day2.p.rapidapi.com/word/today', options)
 	.then(response => response.json())
-	.then(response => console.log(response.data[69]))
+	.then(response => {
+        document.querySelector('.word h4').innerHTML = `Palavra do dia: ${response[2].word}`;
+    })
 	.catch(err => console.error(err));
+
+
+    `use strict`;
+    function refreshTime() {
+      const tempo = document.getElementById("tempo");
+      const data = new Date().toLocaleString();
+      const tempoData = data.replace(", ", " - ");
+      tempo.textContent = tempoData;
+    }
+      setInterval(refreshTime, 1000);
     </script>
 </head>
 <body>
   <header>
-    <div>Felipe Bandeira</div>
+    <div>Felipe Bandeira </div>
     <!--<nav>
       <a href="{ url 'portfolio:home' %}">Home</a>
         <a href="{ url 'portfolio:apresentacao' %}">Apresentação</a>
@@ -85,6 +97,8 @@ fetch('https://covid-19-statistics.p.rapidapi.com/regions', options)
        {% endblock main %}
   </main>
 
-  <footer>ULHT, 2022 - Felipe Bandeira <br> Contacto: +351 938461083 - <a href="https://www.linkedin.com/in/felipegbandeira/">LinkedIn</a></footer>
+  <footer>ULHT, 2022 - Felipe Bandeira <br> Contacto: +351 938461083 -
+      <a href="https://www.linkedin.com/in/felipegbandeira/">LinkedIn</a><br><span id="tempo"></span>
+  </footer>
 </body>
 </html>
