@@ -143,6 +143,15 @@ main{
     margin-right: auto;
 }
 
+.meteorologia{
+    padding: 20px;
+    margin: 10px 10px 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: black solid 2px;
+    text-align: center;
+    width: 50%;
+}
 
 .container-licenciatura{
     display: flex;
@@ -308,14 +317,4 @@ footer{
 .word h4{
     color: red;
     text-shadow: 1px 1px black;
-}
-
-.meteorologia{
-    padding: 20px;
-    margin: 10px 10px 10px 20px;
-    background-color: white;
-    border-radius: 10px;
-    border: black solid 2px;
-    text-align: center;
-    width: 50%;
 }
