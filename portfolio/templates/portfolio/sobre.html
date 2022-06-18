@@ -13,7 +13,7 @@
 
 
         <div class="tecnologias">
-            <h3 class="titulos">Tecnologias utilizadas no site</h3>
+            <h3 class="titulos">Padrões e Tecnologias Utilizadas no Site</h3>
              {% for tecnologia in Tecs %}
                 <div class="tech">
                     <p class="lead">{{ tecnologia.nome }} ({{ tecnologia.acronimo }})</p>
@@ -21,8 +21,19 @@
                     <p>Ano: {{ tecnologia.ano }}</p>
                 </div>
             {% endfor %}
+
         </div>
 
+        <div class="padroes">
+            <h3 class="titulos">Padrões Utilizados no Site</h3>
+            <article>Neste site foram utilizados os padrões: AJAX, Client-server HTTP e software MVC<br><br>
+            HTTP - protocolo de transferência que possibilita que as pessoas que inserem a URL do seu site na Web possam
+                ver os conteúdos e dados que nele existem<br><br>
+            Software MVC - facilita a troca de informações entre a interface do usuário aos dados no banco, fazendo com
+                que as respostas sejam mais rápidas e dinâmicas<br><br>
+            AJAX - conjunto de técnicas de desenvolvimento voltado para a web que permite que aplicações trabalhem de
+                modo assíncrono, processando qualquer requisição ao servidor em segundo plano.</article>
+        </div>
 
     </div>
 

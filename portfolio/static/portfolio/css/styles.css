@@ -123,7 +123,7 @@ main{
 
 .tech{
     float: left;
-    width: 250px;   height: 170px;
+    width: 200px;   height: 170px;
     background-color: white;
     border-radius: 10px; border: solid black 2px;
     margin: 10px 10px 10px 60px;
@@ -224,17 +224,30 @@ main{
     text-align: center;
 }
 
+
+
 article{
     width: 60%;
     text-align: justify;
     font-weight: bold;
-    text-shadow: black 1px 1px;
     font-size: large;
     margin-bottom: 150px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
 }
+
+.padroes article{
+    width: 75%;
+    text-align: justify;
+    font-size: medium;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 .container-quiz{
     background-color: white;
