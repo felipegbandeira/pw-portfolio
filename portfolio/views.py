@@ -14,7 +14,8 @@ def apresntacao_page_view(request):
     return render(request, 'portfolio/apresentacao.html')
 
 def noticias_page_view(request):
-    return render(request, 'portfolio/noticias.html')
+    ctx = {"noticias": Noticia.objects.all()}
+    return render(request, 'portfolio/noticias.html',ctx)
 
 def contacto_page_view(request):
     return render(request, 'portfolio/contacto.html')

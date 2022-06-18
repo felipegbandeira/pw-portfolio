@@ -9,15 +9,18 @@
             <h4 class="awarness"></h4>
             <h4 class="area"></h4>
             <i><p></p></i>
-
         </div>
 
+        {% for noticia in noticias %}
+                <div class="noticias">
+                <h3>{{ noticia.titulo }}</h3>
+                    <p>{{ noticia.texto }}</p>
+                <p> <a href="{{ noticia.link }}"> Continue lendo </a></p>
+                </div>
+        {% endfor %}
 
         <div class="word">
                 <i><h4 class="titulos"></h4></i>
         </div>
-
-
-
     </div>
 {% endblock %}

@@ -72,7 +72,11 @@ a{
 .tfcs a{
     color: black;
     text-align: center;
+}
 
+.noticias a{
+    color: black;
+    text-align: center;
 }
 
 nav a {
@@ -110,6 +114,13 @@ main{
     padding: 25px 180px;
 }
 
+.container-noticias{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 180px;
+}
+
 .tech{
     float: left;
     width: 250px;   height: 170px;
@@ -141,7 +152,7 @@ main{
 }
 
 
-.cadeira{
+.cadeira, .noticias{
     float: left;
     width: 400px;   height: 320px;
     padding: 25px;  margin: 10px;
@@ -151,7 +162,7 @@ main{
     text-align: center;
 }
 
-.cadeira p{
+.cadeira p, .noticias p{
     text-align: justify;
 }
 
@@ -170,7 +181,7 @@ main{
     text-align: center;
 }
 
-.container-blog, .container-quiz, .container-home, .container-noticias{
+.container-blog, .container-quiz, .container-home{
     display: block;
     justify-content: center;
     padding: 20px;
@@ -301,7 +312,7 @@ footer{
 
 .meteorologia{
     padding: 20px;
-    margin: 10px 10px 10px 320px;
+    margin: 10px 10px 10px 20px;
     background-color: white;
     border-radius: 10px;
     border: black solid 2px;
